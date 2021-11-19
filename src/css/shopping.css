@@ -1,0 +1,58 @@
+
+a {
+    text-decoration: none;
+    color: #5c5a5a;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.container .header {
+    margin-bottom: 20px;
+}
+
+.container table {
+    width: 100%;
+}
+
+.container table th,
+td {
+    border-bottom: 1px dashed gray;
+    text-align: center;
+    width: 100px;
+}
+
+.container table input[name='minus'],
+input[name='plus'] {
+    width: 20px;
+    text-align: center;
+    background-color: #f1ebeb;
+}
+
+.container table input[name='amount'] {
+    width: 50px;
+    text-align: center;
+}
+
+.container h2 {
+    text-align: right;
+}
+
+.container h2 span {
+    color: red;
+}
+.book-list table img{
+    width: 100px;
+}
+.book-list table p{
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
