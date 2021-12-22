@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>熊猫优选</title><link rel="stylesheet" href="../css/reset.css"><link rel="stylesheet" href="../css/title.css"><link rel="stylesheet" href="../css/swiper-bundle.min.css"><!-- 轮播框样式 --></head><body><!-- 标题 --><div id="title"><!-- logo --><div class="box1"><div class="logo"><a href="#"><img src="../img/title/logo_03.jpg" alt=""></a></div><div class="text"><a href="#"><h3>熊猫优选</h3><span>XIONG MAO YOU XUAN</span></a></div></div><!-- 搜索 --><div class="box2"><div class="searchBox"><img src="../img/title/sousuo.png" alt=""><form action="#"><input type="text" class="text" placeholder="搜索商品，发现更多优惠"> <input type="button" value="搜索" class="button"></form></div></div><!-- 介绍 --><div class="box3"><div><img src="../img/title/下载.png" alt=""> <span>全程包邮</span></div><div><img src="../img/title/下载 (1).png" alt=""> <span>7天退换</span></div><div><img src="../img/title/下载 (2).png" alt=""> <span>品质保证</span></div></div></div><!-- 导航 --><div id="navigation"><div class="centaner"><ul><li><a href="javascript:void(0)" id="index" index="0" class="style">首页</a></li><li><a href="javascript:void(0)" id="shipping" index="1">9块9包邮</a></li><li><a href="javascript:void(0)" id="coupon" index="2">超值大额卷</a></li><li><a href="javascript:void(0)" id="wear" index="3">降温急救穿搭</a></li></ul></div></div><!-- 内容区 --><aside></aside><!-- 更多按钮 --><div id="more"><input type="button" class="moreBut" value="加载更多"><p class="hide">已经没有更多了</p></div><!-- 页脚 --><div id="foot"><div class="centanier"><a href=""><img src="../img/title/icon.png" alt=""></a><div><a href=""><h2>熊猫优选</h2><p>年轻人网购首选</p><p>购物领巻更省钱</p></a></div><p class="text"><a href="#">|&emsp;下载APP</a></p></div><div class="foot-text"><img src="../img/title/license.png" alt=""><p>浙公安网备案 33010602009949号 | ICP备案号: 浙ICP备17012864号-1|</p><img src="../img/title/policeIcon.png" alt=""><p>证照信息</p></div><!-- 回到顶部 --><div id="top"><p>回到顶部</p></div></div><!-- <aside></aside>区模板 --><!-- ______________________________________________________________________________________________________________________ --><!-- 首页轮播模板 --><script type="text/html" id="index-0"><div id="homePage">
+            <div class='homePage-navigation'>
+                <ul>
+                    <li><a href="#"><img src="../img/title/下载 (3).png" alt="">&emsp;女装/女鞋</a> </li>
+                    <li><a href="#"><img src="../img/title/下载 (3).png" alt="">&emsp;女装/女鞋</a> </li>
+                    <li><a href="#"><img src="../img/title/下载 (3).png" alt="">&emsp;女装/女鞋</a> </li>
+                    <li><a href="#"><img src="../img/title/下载 (3).png" alt="">&emsp;女装/女鞋</a> </li>
+                    <li><a href="#"><img src="../img/title/下载 (3).png" alt="">&emsp;女装/女鞋</a> </li>
+                    <li><a href="#"><img src="../img/title/下载 (3).png" alt="">&emsp;女装/女鞋</a> </li>
+                    <li><a href="#"><img src="../img/title/下载 (3).png" alt="">&emsp;女装/女鞋</a> </li>
+                    <li><a href="#"><img src="../img/title/下载 (3).png" alt="">&emsp;女装/女鞋</a> </li>
+                    <li><a href="#"><img src="../img/title/下载 (3).png" alt="">&emsp;女装/女鞋</a> </li>
+                    <li><a href="#"><img src="../img/title/下载 (3).png" alt="">&emsp;女装/女鞋</a> </li>
+                </ul>
+            </div>
+            <!-- 轮播 -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {{ each  bannerData }}
+                    <div class="swiper-slide"><a href="#"><img
+                                src="{{$value.imageUrl}}" alt=""></a></div>
+                     {{ /each }}            
+                </div>
+                <!-- 分页器 -->
+                <div class="swiper-pagination"></div>
+                <!-- 导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div></script><!-- 商品模板 --><script type="text/html" id="index-1"><!-- 标题 -->
+        <div id="homePage-title">
+            <h2>小编精选</h2> <span>每日更新</span>
+        </div>
+        <!-- 商品内容 -->
+        <div id="homePage-contentData">
+
+            {{ each  homePageProduct }}
+            <div class="itme" onclick="extract({{$value.id}})">
+                <img src="{{$value.image}}" alt="">
+                <p class="p-title">{{$value.title}}</p>
+                <div class="box1">
+                    <p>淘宝</p>
+                </div>
+                <div class="box2">
+                    <span class="box1">￥{{$value.price}}</span> <span class="box2">{{$value.saleNum}}人购买</span>
+                </div>
+            </div>
+            {{ /each }}
+        </div></script><!-- 添加模板 --><script type="text/html" id="index-2"><!-- 商品内容 -->
+            {{ each  homePageProduct }}
+            <div class="itme" index={{$value.id}} onclick="extract({{$value.id}})">
+                <img src="{{$value.image}}" alt="">
+                <p class="p-title">{{$value.title}}</p>
+                <div class="box1">
+                    <p>淘宝</p>
+                </div>
+                <div class="box2">
+                    <span class="box1">￥{{$value.price}}</span> <span class="box2">{{$value.saleNum}}人购买</span>
+                </div>
+            </div>
+            {{ /each }}</script><!-- ---------------------------------------------------------------------------------------------------------------------------------------------- --><script src="../js/jquery-3.6.0.js"></script><!-- 轮播框js --><script src="../js/swiper-bundle.min.js"></script><script src="../js/template-web.js"></script><script src="../js/title.js"></script><!-- 轮播样式 --><script>new Swiper('.swiper-container', {
+            loop: true, // 循环模式选项
+            initialSlide: 0,
+            autoplay: true, //自动轮播
+            effect: 'coverflow',
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })</script></body></html>
